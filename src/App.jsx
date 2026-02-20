@@ -162,7 +162,7 @@ function Nav({ page, setPage }) {
                 color: page===l.id ? T.lime : T.muted, transition:"color 0.2s",
               }}>{l.label}</button>
             ))}
-            <button onClick={()=>window.open("https://garima-portal.vercel.app","_blank")} style={{
+            <button onClick={()=>window.open("https://garima-app-3.vercel.app","_blank")} style={{
               marginLeft:8, padding:"9px 20px", borderRadius:100, border:`1.5px solid ${T.lime}`,
               background:"transparent", cursor:"pointer", fontSize:13, fontWeight:700,
               color:T.lime, fontFamily:"inherit", letterSpacing:"0.02em",
@@ -1056,5 +1056,6 @@ export default function App() {
     </div>
   );
 }
+
 
 
