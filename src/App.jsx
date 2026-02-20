@@ -11,7 +11,7 @@ const T = {
   muted:  "#1F2937",
   dim:    "#9CA3AF",
 
-  lime:   "#84CC16",
+  lime:   "#5B4FDB",
   blue:   "#2563EB",
   purple: "#7C3AED",
   pink:   "#DB2777",
@@ -1056,6 +1056,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
