@@ -8,7 +8,7 @@ const T = {
   border: "#E5E7EB",
 
   text:   "#111827",
-  muted:  "#6B7280",
+  muted:  "#1F2937",
   dim:    "#9CA3AF",
 
   lime:   "#84CC16",
@@ -1056,4 +1056,5 @@ export default function App() {
     </div>
   );
 }
+
 
