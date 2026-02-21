@@ -74,7 +74,7 @@ const Chip = ({ active, onClick, children }) => (
 const Pill = ({ active, onClick, children }) => (
   <button onClick={onClick} style={{
     padding:"7px 14px", borderRadius:100, border:"none", cursor:"pointer",
-    fontFamily:"inherit", fontSize:12, fontWeight:700,
+    fontFamily:"Inter Tight', 'Inter', sans-serif", fontSize:12, fontWeight:700,
     background: active ? T.lime : "transparent",
     color: active ? T.bg : T.muted,
     outline: active ? "none" : `1.5px solid ${T.border}`,
@@ -87,7 +87,7 @@ const Input = ({ value, onChange, placeholder, type="text" }) => (
     style={{
       width:"100%", padding:"11px 14px", borderRadius:10, border:`1.5px solid ${T.border}`,
       background:"rgba(255,255,255,0.03)", color:T.text, fontSize:14,
-      fontFamily:"inherit", outline:"none", boxSizing:"border-box",
+      fontFamily:"Inter Tight', 'Inter', sans-serif", outline:"none", boxSizing:"border-box",
       transition:"border-color 0.2s",
     }}
     onFocus={e=>e.target.style.borderColor=T.lime}
@@ -167,14 +167,14 @@ function Nav({ page, setPage }) {
             {links.map(l=>(
               <button key={l.id} onClick={()=>setPage(l.id)} style={{
                 background:"none", border:"none", cursor:"pointer", padding:"8px 14px",
-                borderRadius:8, fontSize:14, fontWeight:600, fontFamily:"inherit",
+                borderRadius:8, fontSize:14, fontWeight:600, fontFamily:"Inter Tight', 'Inter', sans-serif",
                 color: page===l.id ? T.lime : T.muted, transition:"color 0.2s",
               }}>{l.label}</button>
             ))}
             <button onClick={()=>window.open("https://finzzup-portal-v4.vercel.app","_blank")} style={{
               marginLeft:8, padding:"9px 20px", borderRadius:100, border:`1.5px solid ${T.lime}`,
               background:"transparent", cursor:"pointer", fontSize:13, fontWeight:700,
-              color:T.lime, fontFamily:"inherit", letterSpacing:"0.02em",
+              color:T.lime, fontFamily:"Inter Tight', 'Inter', sans-serif", letterSpacing:"0.02em",
             }}>Client Login →</button>
           </div>
           <button onClick={()=>setOpen(o=>!o)} className="hamb" style={{ background:"none", border:"none", cursor:"pointer", display:"none", padding:4 }}>
@@ -189,14 +189,14 @@ function Nav({ page, setPage }) {
           {links.map(l=>(
             <button key={l.id} onClick={()=>{setPage(l.id);setOpen(false);}} style={{
               display:"block", width:"100%", textAlign:"left", background:"none", border:"none",
-              cursor:"pointer", padding:"13px 0", fontSize:15, fontWeight:600, fontFamily:"inherit",
+              cursor:"pointer", padding:"13px 0", fontSize:15, fontWeight:600, fontFamily:"Inter Tight', 'Inter', sans-serif",
               color:T.muted, borderBottom:`1px solid ${T.border}`,
             }}>{l.label}</button>
           ))}
           <button onClick={()=>window.open("https://garima-portal.vercel.app","_blank")} style={{
             marginTop:16, width:"100%", padding:13, borderRadius:12, border:`1.5px solid ${T.lime}`,
             background:"transparent", cursor:"pointer", fontSize:14, fontWeight:700,
-            color:T.lime, fontFamily:"inherit",
+            color:T.lime, fontFamily:"Inter Tight', 'Inter', sans-serif",
           }}>Client Login →</button>
         </div>
       )}
@@ -207,7 +207,7 @@ function Nav({ page, setPage }) {
         *{box-sizing:border-box;margin:0;padding:0}
         body{background:${T.bg};color:${T.text};font-family:'Space Grotesk',sans-serif;}
         ::selection{background:${T.lime};color:${T.bg}}
-        a{color:inherit;text-decoration:none}
+        a{color:Inter Tight', 'Inter', sans-serif;text-decoration:none}
         button:hover{opacity:0.88}
       `}</style>
     </>
@@ -269,12 +269,12 @@ function Home({ setPage }) {
           <div style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
             <button onClick={()=>setPage("calculator")} style={{
               padding:"14px 28px", borderRadius:12, border:"none", cursor:"pointer",
-              fontFamily:"inherit", fontWeight:700, fontSize:15, background:T.lime,
+              fontFamily:"Inter Tight', 'Inter', sans-serif", fontWeight:700, fontSize:15, background:T.lime,
               color:T.bg, letterSpacing:"0.01em",
             }}>Try Free Calculator →</button>
             <button onClick={()=>setPage("contact")} style={{
               padding:"14px 28px", borderRadius:12, cursor:"pointer",
-              fontFamily:"inherit", fontWeight:700, fontSize:15, background:"transparent",
+              fontFamily:"Inter Tight', 'Inter', sans-serif", fontWeight:700, fontSize:15, background:"transparent",
               color:T.muted, border:`1.5px solid ${T.border}`,
             }}>Talk to Garima</button>
           </div>
@@ -353,7 +353,7 @@ function Home({ setPage }) {
           </div>
           <button onClick={()=>setPage("calculator")} style={{
             padding:"14px 32px", borderRadius:12, border:"none", cursor:"pointer",
-            fontFamily:"inherit", fontWeight:700, fontSize:15, background:T.lime,
+            fontFamily:"Inter Tight', 'Inter', sans-serif", fontWeight:700, fontSize:15, background:T.lime,
             color:T.bg, flexShrink:0,
           }}>Try Calculator →</button>
         </div>
@@ -452,7 +452,7 @@ function Calculator() {
                 {Object.keys(STAGES).map(k=>(
                   <button key={k} onClick={()=>set("stage",k)} style={{
                     display:"flex", alignItems:"center", gap:10, padding:"11px 14px",
-                    borderRadius:10, border:"none", cursor:"pointer", fontFamily:"inherit",
+                    borderRadius:10, border:"none", cursor:"pointer", fontFamily:"Inter Tight', 'Inter', sans-serif",
                     fontSize:13, fontWeight:600, textAlign:"left", transition:"all 0.15s",
                     background: f.stage===k ? `${T.lime}15` : T.card,
                     color: f.stage===k ? T.text : T.muted,
@@ -553,7 +553,7 @@ function Calculator() {
                 <div style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, fontSize:16, color:T.text, marginBottom:6 }}>Want the real report?</div>
                 <p style={{ fontSize:13, color:T.muted, marginBottom:14 }}>Starts at ₹30,000 · 5–7 working days · Holds up to IT scrutiny and FEMA filings.</p>
                 <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
-                  <button onClick={()=>setDone(true)} style={{ flex:1, minWidth:140, padding:12, borderRadius:10, border:"none", cursor:"pointer", fontFamily:"inherit", fontWeight:700, fontSize:13, background:T.lime, color:T.bg }}>
+                  <button onClick={()=>setDone(true)} style={{ flex:1, minWidth:140, padding:12, borderRadius:10, border:"none", cursor:"pointer", fontFamily:"Inter Tight', 'Inter', sans-serif", fontWeight:700, fontSize:13, background:T.lime, color:T.bg }}>
                     Get Formal Valuation →
                   </button>
                   <a href="https://wa.me/919999999999" target="_blank" rel="noopener" style={{ flex:1, minWidth:120, padding:12, borderRadius:10, fontWeight:700, fontSize:13, background:"rgba(16,185,129,0.1)", border:`1.5px solid rgba(16,185,129,0.25)`, color:T.green, display:"flex", alignItems:"center", justifyContent:"center", gap:6 }}>
@@ -563,7 +563,7 @@ function Calculator() {
               </div>
 
               <button onClick={()=>{setStep(1);setResult(null);setF({industry:"",stage:"",revenue:"",ebitda:"",growth:"",purpose:"",name:"",email:"",phone:""});}}
-                style={{ width:"100%", padding:10, borderRadius:10, border:`1.5px solid ${T.border}`, background:"transparent", color:T.dim, fontSize:12, cursor:"pointer", fontFamily:"inherit" }}>
+                style={{ width:"100%", padding:10, borderRadius:10, border:`1.5px solid ${T.border}`, background:"transparent", color:T.dim, fontSize:12, cursor:"pointer", fontFamily:"Inter Tight', 'Inter', sans-serif" }}>
                 ← Start over
               </button>
             </div>
@@ -573,12 +573,12 @@ function Calculator() {
           {step<4&&(
             <div style={{ display:"flex", justifyContent:"space-between", marginTop:24 }}>
               {step>1
-                ? <button onClick={()=>setStep(s=>s-1)} style={{ padding:"10px 20px", borderRadius:10, border:`1.5px solid ${T.border}`, background:"transparent", color:T.muted, fontSize:13, fontWeight:600, cursor:"pointer", fontFamily:"inherit" }}>← Back</button>
+                ? <button onClick={()=>setStep(s=>s-1)} style={{ padding:"10px 20px", borderRadius:10, border:`1.5px solid ${T.border}`, background:"transparent", color:T.muted, fontSize:13, fontWeight:600, cursor:"pointer", fontFamily:"Inter Tight', 'Inter', sans-serif" }}>← Back</button>
                 : <div/>
               }
               <button onClick={next} disabled={!ok[step]} style={{
                 padding:"12px 28px", borderRadius:12, border:"none", cursor:ok[step]?"pointer":"not-allowed",
-                fontFamily:"inherit", fontWeight:700, fontSize:14, transition:"all 0.2s",
+                fontFamily:"Inter Tight', 'Inter', sans-serif", fontWeight:700, fontSize:14, transition:"all 0.2s",
                 background: ok[step] ? T.lime : T.card,
                 color: ok[step] ? T.bg : T.dim,
                 outline: ok[step] ? "none" : `1.5px solid ${T.border}`,
@@ -657,7 +657,7 @@ function Cases() {
           {cases.map((c,i)=>(
             <button key={i} onClick={()=>setActive(i)} style={{
               padding:"9px 16px", borderRadius:100, border:"none", cursor:"pointer",
-              fontFamily:"inherit", fontSize:13, fontWeight:700, transition:"all 0.2s",
+              fontFamily:"Inter Tight', 'Inter', sans-serif", fontSize:13, fontWeight:700, transition:"all 0.2s",
               background: active===i ? cases[i].accent : T.card,
               color: active===i ? T.bg : T.muted,
               outline: active===i ? "none" : `1.5px solid ${T.border}`,
@@ -851,7 +851,7 @@ If you're investing from Saudi Arabia or UAE, feel free to DM me — I've naviga
     return (
       <div style={{ padding:"120px 24px 80px", minHeight:"100vh" }}>
         <div style={{ maxWidth:680, margin:"0 auto" }}>
-          <button onClick={()=>setActive(null)} style={{ background:"none", border:`1px solid ${T.border}`, borderRadius:8, padding:"8px 14px", color:T.muted, fontSize:13, fontWeight:600, cursor:"pointer", fontFamily:"inherit", marginBottom:32 }}>← Back to Insights</button>
+          <button onClick={()=>setActive(null)} style={{ background:"none", border:`1px solid ${T.border}`, borderRadius:8, padding:"8px 14px", color:T.muted, fontSize:13, fontWeight:600, cursor:"pointer", fontFamily:"Inter Tight', 'Inter', sans-serif", marginBottom:32 }}>← Back to Insights</button>
           <div style={{ fontSize:11, fontWeight:700, color:p.accent, textTransform:"uppercase", letterSpacing:"0.1em", marginBottom:10 }}>{p.tag} · {p.mins} min read</div>
           <h1 style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:"clamp(24px,4vw,36px)", color:T.text, lineHeight:1.15, marginBottom:24 }}>{p.title}</h1>
           <div style={{ fontSize:13, color:T.muted, marginBottom:32, padding:"12px 16px", borderRadius:10, background:T.card, border:`1px solid ${T.border}` }}>
@@ -898,7 +898,7 @@ If you're investing from Saudi Arabia or UAE, feel free to DM me — I've naviga
           {posts.map((p,i)=>(
             <button key={i} onClick={()=>setActive(i)} style={{
               background:T.card, border:`1px solid ${T.border}`, borderRadius:20,
-              padding:24, textAlign:"left", cursor:"pointer", fontFamily:"inherit",
+              padding:24, textAlign:"left", cursor:"pointer", fontFamily:"Inter Tight', 'Inter', sans-serif",
               transition:"border-color 0.2s", position:"relative", overflow:"hidden",
             }}
               onMouseEnter={e=>e.currentTarget.style.borderColor=p.accent+"50"}
@@ -987,14 +987,14 @@ function Contact() {
               <Label>Message</Label>
               <textarea value={f.message} onChange={e=>set("message",e.target.value)}
                 placeholder="Tell me about your situation — rough numbers and timeline are helpful..."
-                rows={4} style={{ width:"100%", padding:"11px 14px", borderRadius:10, border:`1.5px solid ${T.border}`, background:"rgba(255,255,255,0.03)", color:T.text, fontSize:14, fontFamily:"inherit", resize:"vertical", outline:"none", boxSizing:"border-box" }}
+                rows={4} style={{ width:"100%", padding:"11px 14px", borderRadius:10, border:`1.5px solid ${T.border}`, background:"rgba(255,255,255,0.03)", color:T.text, fontSize:14, fontFamily:"Inter Tight', 'Inter', sans-serif", resize:"vertical", outline:"none", boxSizing:"border-box" }}
                 onFocus={e=>e.target.style.borderColor=T.lime}
                 onBlur={e=>e.target.style.borderColor=T.border}
               />
             </div>
             <button onClick={()=>setSent(true)} disabled={!ok} style={{
               width:"100%", padding:13, borderRadius:12, border:"none", cursor:ok?"pointer":"not-allowed",
-              fontFamily:"inherit", fontWeight:700, fontSize:14,
+              fontFamily:"Inter Tight', 'Inter', sans-serif", fontWeight:700, fontSize:14,
               background: ok ? T.lime : T.card,
               color: ok ? T.bg : T.dim,
               outline: ok ? "none" : `1.5px solid ${T.border}`,
@@ -1031,7 +1031,7 @@ function Footer({ setPage }) {
             {col.links.map(([l,p],j)=>(
               <div key={j} style={{ marginBottom:8 }}>
                 {p ? (
-                  <button onClick={()=>setPage(p)} style={{ background:"none", border:"none", cursor:"pointer", fontSize:13, color:T.dim, fontFamily:"inherit", padding:0 }}>{l}</button>
+                  <button onClick={()=>setPage(p)} style={{ background:"none", border:"none", cursor:"pointer", fontSize:13, color:T.dim, fontFamily:"Inter Tight', 'Inter', sans-serif", padding:0 }}>{l}</button>
                 ) : (
                   <span style={{ fontSize:12, color:T.dim }}>{l}</span>
                 )}
@@ -1065,6 +1065,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
