@@ -550,7 +550,7 @@ function Calculator() {
 
               {/* CTA */}
               <div style={{ padding:20, borderRadius:16, background:`linear-gradient(135deg,rgba(200,255,0,0.05),rgba(79,142,247,0.05))`, border:`1px solid ${T.lime}20`, marginBottom:12 }}>
-                <div style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, fontSize:16, color:T.text, marginBottom:6 }}>Want the real report?</div>
+                <div style={{ fontFamily:"Inter Tight', 'Inter', sans-serif", fontWeight:700, fontSize:16, color:T.text, marginBottom:6 }}>Want the real report?</div>
                 <p style={{ fontSize:13, color:T.muted, marginBottom:14 }}>Starts at ₹30,000 · 5–7 working days · Holds up to IT scrutiny and FEMA filings.</p>
                 <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
                   <button onClick={()=>setDone(true)} style={{ flex:1, minWidth:140, padding:12, borderRadius:10, border:"none", cursor:"pointer", fontFamily:"Inter Tight', 'Inter', sans-serif", fontWeight:700, fontSize:13, background:T.lime, color:T.bg }}>
@@ -853,13 +853,13 @@ If you're investing from Saudi Arabia or UAE, feel free to DM me — I've naviga
         <div style={{ maxWidth:680, margin:"0 auto" }}>
           <button onClick={()=>setActive(null)} style={{ background:"none", border:`1px solid ${T.border}`, borderRadius:8, padding:"8px 14px", color:T.muted, fontSize:13, fontWeight:600, cursor:"pointer", fontFamily:"Inter Tight', 'Inter', sans-serif", marginBottom:32 }}>← Back to Insights</button>
           <div style={{ fontSize:11, fontWeight:700, color:p.accent, textTransform:"uppercase", letterSpacing:"0.1em", marginBottom:10 }}>{p.tag} · {p.mins} min read</div>
-          <h1 style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:"clamp(24px,4vw,36px)", color:T.text, lineHeight:1.15, marginBottom:24 }}>{p.title}</h1>
+          <h1 style={{ fontFamily:"Inter Tight', 'Inter', sans-serif", fontWeight:800, fontSize:"clamp(24px,4vw,36px)", color:T.text, lineHeight:1.15, marginBottom:24 }}>{p.title}</h1>
           <div style={{ fontSize:13, color:T.muted, marginBottom:32, padding:"12px 16px", borderRadius:10, background:T.card, border:`1px solid ${T.border}` }}>
             By <strong style={{ color:T.text }}>Garima Agarwal</strong> · CA · IBBI Registered Valuer
           </div>
           {p.body.split("\n\n").map((para,i)=>{
             if(para.startsWith("**") && para.endsWith("**")) {
-              return <h3 key={i} style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, fontSize:18, color:T.text, margin:"28px 0 10px" }}>{para.replace(/\*\*/g,"")}</h3>;
+              return <h3 key={i} style={{ fontFamily:"'Inter Tight', 'Inter', sans-serif", fontWeight:700, fontSize:18, color:T.text, margin:"28px 0 10px" }}>{para.replace(/\*\*/g,"")}</h3>;
             }
             if(para.match(/^\d\./)) {
               return <div key={i} style={{ padding:"10px 14px", borderRadius:8, background:T.card, border:`1px solid ${T.border}`, marginBottom:8, fontSize:14, color:T.muted, lineHeight:1.7 }}>
@@ -879,7 +879,7 @@ If you're investing from Saudi Arabia or UAE, feel free to DM me — I've naviga
             </p>;
           })}
           <div style={{ marginTop:48, padding:24, borderRadius:16, background:`${p.accent}10`, border:`1px solid ${p.accent}30` }}>
-            <div style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, fontSize:18, color:T.text, marginBottom:8 }}>Have a question about this?</div>
+            <div style={{ fontFamily:"'Inter Tight', 'Inter', sans-serif", fontWeight:700, fontSize:18, color:T.text, marginBottom:8 }}>Have a question about this?</div>
             <p style={{ fontSize:14, color:T.muted, marginBottom:16 }}>DM Garima on WhatsApp or LinkedIn — or use the contact form.</p>
             <a href="https://wa.me/919999999999" target="_blank" rel="noopener" style={{ display:"inline-flex", alignItems:"center", gap:8, padding:"10px 20px", borderRadius:10, background:T.green+"15", border:`1.5px solid ${T.green}30`, color:T.green, fontSize:13, fontWeight:700 }}>
               💬 WhatsApp Garima
@@ -905,7 +905,7 @@ If you're investing from Saudi Arabia or UAE, feel free to DM me — I've naviga
               onMouseLeave={e=>e.currentTarget.style.borderColor=T.border}>
               <div style={{ position:"absolute", top:0, left:0, right:0, height:3, background:p.accent, opacity:0.7 }}/>
               <div style={{ fontSize:11, fontWeight:700, color:p.accent, textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:8 }}>{p.tag} · {p.mins} min read</div>
-              <h3 style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, fontSize:18, color:T.text, lineHeight:1.25, marginBottom:10 }}>{p.title}</h3>
+              <h3 style={{ fontFamily:"''Inter Tight', 'Inter', sans-serif", fontWeight:700, fontSize:18, color:T.text, lineHeight:1.25, marginBottom:10 }}>{p.title}</h3>
               <p style={{ fontSize:14, color:T.muted, lineHeight:1.6 }}>{p.excerpt}</p>
               <div style={{ marginTop:16, fontSize:13, fontWeight:700, color:p.accent }}>Read article →</div>
             </button>
@@ -928,7 +928,7 @@ function Contact() {
     <div style={{ minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", padding:"120px 24px 80px" }}>
       <div style={{ textAlign:"center", maxWidth:380 }}>
         <div style={{ width:72, height:72, borderRadius:20, background:T.lime, display:"flex", alignItems:"center", justifyContent:"center", fontSize:28, margin:"0 auto 24px" }}>✓</div>
-        <h2 style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:28, color:T.text, marginBottom:12 }}>Message sent!</h2>
+        <h2 style={{ fontFamily:"'Inter Tight', 'Inter', sans-serif", fontWeight:800, fontSize:28, color:T.text, marginBottom:12 }}>Message sent!</h2>
         <p style={{ fontSize:15, color:T.muted, lineHeight:1.7 }}>Garima will respond within 24 hours. If it's urgent, WhatsApp is faster.</p>
         <a href="https://wa.me/919833585810" target="_blank" rel="noopener" style={{ display:"inline-flex", alignItems:"center", gap:8, marginTop:20, padding:"10px 20px", borderRadius:10, background:T.green+"15", border:`1.5px solid ${T.green}30`, color:T.green, fontSize:13, fontWeight:700 }}>
           💬 WhatsApp Garima
@@ -947,7 +947,7 @@ function Contact() {
           <div>
             <div style={{ marginBottom:28 }}>
               <div style={{ fontSize:11, fontWeight:700, color:T.lime, textTransform:"uppercase", letterSpacing:"0.1em", marginBottom:6 }}>Garima Agarwal</div>
-              <div style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, fontSize:22, color:T.text, marginBottom:10 }}>CA · IBBI Registered Valuer</div>
+              <div style={{ fontFamily:"Inter Tight', 'Inter', sans-serif", fontWeight:700, fontSize:22, color:T.text, marginBottom:10 }}>CA · IBBI Registered Valuer</div>
               <p style={{ fontSize:14, color:T.muted, lineHeight:1.7 }}>IBBI/RV/14/2022/15038<br/>agrgarima@gmail.com</p>
             </div>
             {[
@@ -1065,6 +1065,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
