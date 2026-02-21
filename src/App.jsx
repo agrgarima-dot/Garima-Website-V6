@@ -52,16 +52,25 @@ const fmtCr = v => v>=100 ? `₹${(v/100).toFixed(1)} Cr` : v>=1 ? `₹${v.toFix
 
 // ─── TINY HELPERS ─────────────────────────────────────────────────────────────
 const Chip = ({ active, onClick, children }) => (
-  <button onClick={onClick} style={{
-    padding:"8px 14px", borderRadius:8, border:"none", cursor:"pointer",
-    fontFamily:"inherit", fontSize:12, fontWeight:600, textAlign:"left",
-    background: active ? T.lime : T.card,
-    color: active ? T.bg : T.muted,
-    outline: active ? "none" : `1.5px solid ${T.border}`,
-    transition:"all 0.15s",
-  }}>{children}</button>
+  <button
+    onClick={onClick}
+    style={{
+      padding: "8px 16px",
+      borderRadius: 10,
+      border: active ? "none" : `1px solid ${T.border}`,
+      cursor: "pointer",
+      fontFamily: "'Inter Tight', 'Inter', sans-serif",
+      fontSize: 12,
+      fontWeight: 600,
+      letterSpacing: "0.02em",
+      background: active ? T.lime : T.card,
+      color: active ? T.bg : T.muted,
+      transition: "all 0.2s ease",
+    }}
+  >
+    {children}
+  </button>
 );
-
 const Pill = ({ active, onClick, children }) => (
   <button onClick={onClick} style={{
     padding:"7px 14px", borderRadius:100, border:"none", cursor:"pointer",
@@ -1056,6 +1065,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
