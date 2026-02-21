@@ -110,7 +110,7 @@ const Section = ({ children, style={} }) => (
 const SectionHead = ({ eyebrow, title, sub, center=true }) => (
   <div style={{ textAlign:center?"center":"left", marginBottom:56 }}>
     {eyebrow && <div style={{ fontSize:11, fontWeight:700, color:T.lime, textTransform:"uppercase", letterSpacing:"0.12em", marginBottom:12 }}>{eyebrow}</div>}
-    <h2 style={{ fontFamily:"'Syne',sans-serif", fontSize:"clamp(28px,4vw,44px)", fontWeight:800, color:T.text, margin:"0 0 14px", lineHeight:1.1 }}>{title}</h2>
+    <h2 style={{ fontFamily:"Inter Tight', 'Inter', sans-serif", fontSize:"clamp(28px,4vw,44px)", fontWeight:800, color:T.text, margin:"0 0 14px", lineHeight:1.1 }}>{title}</h2>
     {sub && <p style={{ fontSize:16, color:T.muted, lineHeight:1.7, maxWidth:520, margin:center?"0 auto":"0" }}>{sub}</p>}
   </div>
 );
@@ -121,13 +121,13 @@ const Logo = ({ size=32 }) => (
     <svg width={size} height={size} viewBox="0 0 40 40" fill="none">
       <rect width="40" height="40" rx="10" fill={T.lime}/>
       <text x="50%" y="58%" dominantBaseline="middle" textAnchor="middle"
-        style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:22, fill:T.bg }}>
+        style={{ fontFamily:"Inter Tight', 'Inter', sans-serif", fontWeight:800, fontSize:22, fill:T.bg }}>
         F
       </text>
       <circle cx="30" cy="10" r="5" fill={T.bg}/>
       <circle cx="32" cy="10" r="2" fill={T.lime}/>
     </svg>
-    <span style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:22, color:T.text, letterSpacing:"-0.02em" }}>
+    <span style={{ fontFamily:"Inter Tight', 'Inter', sans-serif", fontWeight:800, fontSize:22, color:T.text, letterSpacing:"-0.02em" }}>
       Finzzup
     </span>
   </div>
@@ -253,7 +253,7 @@ function Home({ setPage }) {
           </div>
 
           {/* Headline */}
-          <h1 style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:"clamp(38px,6vw,76px)", lineHeight:1.05, letterSpacing:"-0.02em", marginBottom:20, maxWidth:820 }}>
+          <h1 style={{ fontFamily:"'Inter Tight', 'Inter', sans-serif", fontWeight:800, fontSize:"clamp(38px,6vw,76px)", lineHeight:1.05, letterSpacing:"-0.02em", marginBottom:20, maxWidth:820 }}>
             Know what your<br/>
             <span style={{ color:T.lime }}>business is worth.</span><br/>
             <span style={{ color:T.muted, fontSize:"0.75em", fontWeight:700 }}>Get </span>
@@ -283,7 +283,7 @@ function Home({ setPage }) {
           <div style={{ display:"grid", gridTemplateColumns:"repeat(4,1fr)", gap:1, marginTop:80, borderRadius:16, overflow:"hidden", border:`1px solid ${T.border}` }} className="stats-grid">
             {stats.map((s,i)=>(
               <div key={i} style={{ padding:"24px 20px", background:T.card, borderRight:i<3?`1px solid ${T.border}`:"none", textAlign:"center" }}>
-                <div style={{ fontFamily:"'Syne',sans-serif", fontSize:28, fontWeight:800, color:T.lime, letterSpacing:"-0.02em" }}>{s.n}</div>
+                <div style={{ fontFamily:"'Inter Tight', 'Inter', sans-serif", fontSize:28, fontWeight:800, color:T.lime, letterSpacing:"-0.02em" }}>{s.n}</div>
                 <div style={{ fontSize:12, color:T.muted, marginTop:4, fontWeight:500 }}>{s.l}</div>
               </div>
             ))}
@@ -308,7 +308,7 @@ function Home({ setPage }) {
           {/* Text */}
           <div>
             <div style={{ fontSize:11, fontWeight:700, color:T.lime, textTransform:"uppercase", letterSpacing:"0.1em", marginBottom:12 }}>The Person Behind Finzzup</div>
-            <h2 style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:"clamp(26px,3vw,36px)", color:T.text, marginBottom:16, lineHeight:1.1 }}>Garima Agarwal</h2>
+            <h2 style={{ fontFamily:"'Inter Tight', 'Inter', sans-serif", fontWeight:800, fontSize:"clamp(26px,3vw,36px)", color:T.text, marginBottom:16, lineHeight:1.1 }}>Garima Agarwal</h2>
             <p style={{ fontSize:15, color:T.muted, lineHeight:1.8, marginBottom:20 }}>
               Former Credit Suisse. Big 4 experience. Now building Finzzup to bring institutional-grade financial intelligence to the companies that need it most — without the institutional price tag.
             </p>
@@ -346,7 +346,7 @@ function Home({ setPage }) {
       <section style={{ padding:"0 24px 100px" }}>
         <div style={{ maxWidth:1100, margin:"0 auto", padding:48, borderRadius:24, background:`linear-gradient(135deg,rgba(200,255,0,0.05),rgba(139,92,246,0.05))`, border:`1px solid ${T.lime}20`, display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:24 }}>
           <div>
-            <div style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:28, color:T.text, marginBottom:8 }}>
+            <div style={{ fontFamily:"Inter Tight', 'Inter', sans-serif", fontWeight:800, fontSize:28, color:T.text, marginBottom:8 }}>
               What's your business worth?
             </div>
             <p style={{ fontSize:15, color:T.muted }}>Get an indicative DCF range in 2 minutes. Free, no signup.</p>
@@ -401,7 +401,7 @@ function Calculator() {
     <div style={{ minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", padding:"120px 24px 80px" }}>
       <div style={{ textAlign:"center", maxWidth:400 }}>
         <div style={{ width:72, height:72, borderRadius:20, background:T.lime, display:"flex", alignItems:"center", justifyContent:"center", fontSize:28, margin:"0 auto 24px" }}>✓</div>
-        <h2 style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:28, color:T.text, marginBottom:12 }}>Got it, {f.name.split(" ")[0]}!</h2>
+        <h2 style={{ fontFamily:"'Inter Tight', 'Inter', sans-serif", fontWeight:800, fontSize:28, color:T.text, marginBottom:12 }}>Got it, {f.name.split(" ")[0]}!</h2>
         <p style={{ fontSize:15, color:T.muted, lineHeight:1.7, marginBottom:24 }}>Garima will reach out within 24 hours with a scoped proposal for your IBBI-certified report.</p>
         <div style={{ padding:"10px 20px", borderRadius:100, background:`${T.lime}15`, border:`1px solid ${T.lime}30`, fontSize:12, fontWeight:700, color:T.lime, display:"inline-block" }}>
           Ref: VAL-{Date.now().toString().slice(-6)}
@@ -416,7 +416,7 @@ function Calculator() {
         {/* Header */}
         <div style={{ textAlign:"center", marginBottom:36 }}>
           <div style={{ fontSize:11, fontWeight:700, color:T.lime, textTransform:"uppercase", letterSpacing:"0.1em", marginBottom:10 }}>Free Indicative Tool</div>
-          <h1 style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:"clamp(28px,5vw,44px)", color:T.text, lineHeight:1.1, marginBottom:12 }}>What's your biz worth?</h1>
+          <h1 style={{ fontFamily:"'Inter Tight', 'Inter', sans-serif", fontWeight:800, fontSize:"clamp(28px,5vw,44px)", color:T.text, lineHeight:1.1, marginBottom:12 }}>What's your biz worth?</h1>
           <p style={{ fontSize:14, color:T.muted }}>2-minute indicative DCF range. Based on industry multiples and peer data.</p>
         </div>
 
@@ -442,7 +442,7 @@ function Calculator() {
 
           {step===1&&(
             <div>
-              <h3 style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, fontSize:20, color:T.text, marginBottom:20 }}>About your business</h3>
+              <h3 style={{ fontFamily:"Inter Tight', 'Inter', sans-serif", fontWeight:700, fontSize:20, color:T.text, marginBottom:20 }}>About your business</h3>
               <Label>Industry</Label>
               <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:7, marginBottom:24 }}>
                 {Object.keys(INDUSTRIES).map(k=><Chip key={k} active={f.industry===k} onClick={()=>set("industry",k)}>{k}</Chip>)}
@@ -468,7 +468,7 @@ function Calculator() {
 
           {step===2&&(
             <div>
-              <h3 style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, fontSize:20, color:T.text, marginBottom:6 }}>Financial snapshot</h3>
+              <h3 style={{ fontFamily:"'Inter Tight', 'Inter', sans-serif", fontWeight:700, fontSize:20, color:T.text, marginBottom:6 }}>Financial snapshot</h3>
               <p style={{ fontSize:13, color:T.muted, marginBottom:24 }}>Ballpark figures are fine — this is indicative only.</p>
               <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:14, marginBottom:20 }}>
                 <div>
@@ -492,7 +492,7 @@ function Calculator() {
 
           {step===3&&(
             <div>
-              <h3 style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, fontSize:20, color:T.text, marginBottom:6 }}>Almost there 🎯</h3>
+              <h3 style={{ fontFamily:"'Inter Tight', 'Inter', sans-serif", fontWeight:700, fontSize:20, color:T.text, marginBottom:6 }}>Almost there 🎯</h3>
               <p style={{ fontSize:13, color:T.muted, marginBottom:20 }}>Your result is ready — just tell me why you need a valuation.</p>
               <Label>Purpose</Label>
               <div style={{ display:"flex", gap:7, flexWrap:"wrap", marginBottom:20 }}>
@@ -516,9 +516,9 @@ function Calculator() {
               <div style={{ textAlign:"center", marginBottom:28 }}>
                 <div style={{ fontSize:11, fontWeight:700, color:T.muted, textTransform:"uppercase", letterSpacing:"0.1em", marginBottom:8 }}>Indicative Enterprise Value</div>
                 <div style={{ display:"flex", alignItems:"center", justifyContent:"center", gap:12, marginBottom:6 }}>
-                  <span style={{ fontFamily:"'Syne',sans-serif", fontSize:40, fontWeight:800, color:T.lime }}>{fmtCr(result.low)}</span>
+                  <span style={{ fontFamily:"'Inter Tight', 'Inter', sans-serif", fontSize:40, fontWeight:800, color:T.lime }}>{fmtCr(result.low)}</span>
                   <span style={{ fontSize:22, color:T.dim }}>—</span>
-                  <span style={{ fontFamily:"'Syne',sans-serif", fontSize:40, fontWeight:800, color:T.blue }}>{fmtCr(result.high)}</span>
+                  <span style={{ fontFamily:"'Inter Tight', 'Inter', sans-serif", fontSize:40, fontWeight:800, color:T.blue }}>{fmtCr(result.high)}</span>
                 </div>
                 <div style={{ fontSize:12, color:T.muted }}>Confidence: <span style={{ color:T.yellow, fontWeight:700 }}>{result.confidence}</span> · {f.industry}</div>
               </div>
@@ -1065,6 +1065,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
