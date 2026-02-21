@@ -162,7 +162,7 @@ function Nav({ page, setPage }) {
                 color: page===l.id ? T.lime : T.muted, transition:"color 0.2s",
               }}>{l.label}</button>
             ))}
-            <button onClick={()=>window.open("https://garima-app-3.vercel.app","_blank")} style={{
+            <button onClick={()=>window.open("https://https://finzzup-portal-v4.vercel.app","_blank")} style={{
               marginLeft:8, padding:"9px 20px", borderRadius:100, border:`1.5px solid ${T.lime}`,
               background:"transparent", cursor:"pointer", fontSize:13, fontWeight:700,
               color:T.lime, fontFamily:"inherit", letterSpacing:"0.02em",
@@ -921,7 +921,7 @@ function Contact() {
         <div style={{ width:72, height:72, borderRadius:20, background:T.lime, display:"flex", alignItems:"center", justifyContent:"center", fontSize:28, margin:"0 auto 24px" }}>✓</div>
         <h2 style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:28, color:T.text, marginBottom:12 }}>Message sent!</h2>
         <p style={{ fontSize:15, color:T.muted, lineHeight:1.7 }}>Garima will respond within 24 hours. If it's urgent, WhatsApp is faster.</p>
-        <a href="https://wa.me/919999999999" target="_blank" rel="noopener" style={{ display:"inline-flex", alignItems:"center", gap:8, marginTop:20, padding:"10px 20px", borderRadius:10, background:T.green+"15", border:`1.5px solid ${T.green}30`, color:T.green, fontSize:13, fontWeight:700 }}>
+        <a href="https://wa.me/919833585810" target="_blank" rel="noopener" style={{ display:"inline-flex", alignItems:"center", gap:8, marginTop:20, padding:"10px 20px", borderRadius:10, background:T.green+"15", border:`1.5px solid ${T.green}30`, color:T.green, fontSize:13, fontWeight:700 }}>
           💬 WhatsApp Garima
         </a>
       </div>
@@ -1056,6 +1056,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
