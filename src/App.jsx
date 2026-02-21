@@ -335,7 +335,7 @@ function Home({ setPage }) {
               <div style={{ position:"absolute", top:0, left:0, right:0, height:2, background:s.accent, opacity:0.6 }}/>
               <div style={{ fontSize:32, marginBottom:14 }}>{s.icon}</div>
               <div style={{ fontSize:11, fontWeight:700, color:s.accent, textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:6 }}>{s.label}</div>
-              <div style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, fontSize:18, color:T.text, marginBottom:8 }}>{s.title}</div>
+              <div style={{ fontFamily:"'Inter Tight', 'Inter', sans-serif',sans-serif", fontWeight:700, fontSize:18, color:T.text, marginBottom:8 }}>{s.title}</div>
               <p style={{ fontSize:14, color:T.muted, lineHeight:1.7 }}>{s.desc}</p>
             </div>
           ))}
@@ -669,7 +669,7 @@ function Cases() {
         <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:24, alignItems:"start" }} className="case-grid">
           <div>
             <div style={{ fontSize:11, fontWeight:700, color:c.accent, textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:10 }}>{c.tag}</div>
-            <h2 style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:"clamp(20px,3vw,28px)", color:T.text, marginBottom:16, lineHeight:1.2 }}>{c.title}</h2>
+            <h2 style={{ fontFamily:"'Inter Tight', 'Inter', sans-serif", fontWeight:800, fontSize:"clamp(20px,3vw,28px)", color:T.text, marginBottom:16, lineHeight:1.2 }}>{c.title}</h2>
             <p style={{ fontSize:13, color:T.muted, marginBottom:20, padding:"12px 14px", borderRadius:10, background:T.card, border:`1px solid ${T.border}` }}>
               <strong style={{ color:T.text }}>Client: </strong>{c.client}
             </p>
@@ -678,7 +678,7 @@ function Cases() {
             <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:10, marginBottom:20 }}>
               {c.metrics.map((m,i)=>(
                 <div key={i} style={{ padding:"14px 12px", borderRadius:12, background:T.card, border:`1px solid ${c.accent}30`, textAlign:"center" }}>
-                  <div style={{ fontFamily:"'Syne',sans-serif", fontSize:20, fontWeight:800, color:c.accent }}>{m.v}</div>
+                  <div style={{ fontFamily:"'Inter Tight', 'Inter', sans-serif", fontSize:20, fontWeight:800, color:c.accent }}>{m.v}</div>
                   <div style={{ fontSize:11, color:T.muted, marginTop:3, fontWeight:600 }}>{m.l}</div>
                 </div>
               ))}
@@ -1065,6 +1065,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
