@@ -193,7 +193,7 @@ function Nav({ page, setPage }) {
               color:T.muted, borderBottom:`1px solid ${T.border}`,
             }}>{l.label}</button>
           ))}
-          <button onClick={()=>window.open("https://garima-portal.vercel.app","_blank")} style={{
+          <button onClick={()=>window.open("https://finzzup-portal-v4.vercel.app","_blank")} style={{
             marginTop:16, width:"100%", padding:13, borderRadius:12, border:`1.5px solid ${T.lime}`,
             background:"transparent", cursor:"pointer", fontSize:14, fontWeight:700,
             color:T.lime, fontFamily:"Inter Tight', 'Inter', sans-serif",
@@ -299,7 +299,7 @@ function Home({ setPage }) {
             <div style={{ width:260, height:260, borderRadius:24, overflow:"hidden", border:`3px solid ${T.lime}30`, position:"relative" }}>
               <img src="/garima.jpg" alt="Garima Agarwal" style={{ width:"100%", height:"100%", objectFit:"cover" }}
                 onError={e=>{ e.target.style.display="none"; e.target.parentNode.style.background=`linear-gradient(135deg,${T.bg2},${T.card})`; }}/>
-              <div style={{ position:"absolute", inset:0, display:"flex", alignItems:"center", justifyContent:"center", fontSize:72 }}>👩‍💼</div>
+              <div style={{ position:"absolute", inset:0, display:"flex", alignItems:"center", justifyContent:"center", fontSize:72 }}></div>
             </div>
             {/* Floating credential badges */}
             <div style={{ position:"absolute", top:-12, right:"10%", padding:"8px 14px", borderRadius:100, background:T.lime, fontSize:11, fontWeight:800, color:T.bg, letterSpacing:"0.05em" }}>CA</div>
