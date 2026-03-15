@@ -107,8 +107,14 @@ const SectionHead = ({ eyebrow, title, sub, center=true }) => (
 );
 
 // ─── LOGO ─────────────────────────────────────────────────────────────────────
-const Logo = ({ size=45 }) => (
-  <img src={LOGO_SRC} alt="Finzzup" style={{ height: size * 3.4, width:"auto", objectFit:"contain", display:"block" }}/>
+const Logo = ({ size=32 }) => (
+  <div style={{ display:"flex", alignItems:"center", gap:10 }}>
+    <img src={LOGO_SRC} alt="Finzzup" style={{ height: size + 8, width:"auto", objectFit:"contain", display:"block" }}/>
+    <div style={{ display:"flex", flexDirection:"column", lineHeight:1 }}>
+      <span style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:800, fontSize: size * 0.72, color:"inherit", letterSpacing:"-0.02em" }}>Finzzup</span>
+      <span style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:500, fontSize: size * 0.32, color:"#9CA3AF", letterSpacing:"0.06em", textTransform:"uppercase", marginTop:2 }}>Build. Value. Scale.</span>
+    </div>
+  </div>
 );
 
 // ─── NAV ──────────────────────────────────────────────────────────────────────
