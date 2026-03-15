@@ -221,7 +221,7 @@ function Home({ setPage }) {
     { n:"₹2,100 Cr+", l:"Largest single valuation" },
     { n:"150+",       l:"Reports delivered" },
     { n:"5–7 days",   l:"Average turnaround" },
-    { n:"India & Gulf", l:"Cross-border advisory" },
+    { n:"10 Years", l:"Cross-border experience" },
   ];
 
   return (
@@ -243,7 +243,7 @@ function Home({ setPage }) {
             </span>
           </h1>
           <p style={{ fontSize:18, color:T.muted, lineHeight:1.7, maxWidth:540, marginBottom:40 }}>
-            Finzzup brings CA-grade financial intelligence to startups, SMEs and corporates. IBBI-certified valuations and Fractional CFO services — fast, clear, defensible.
+            Finzzup combines 10 years of cross-border financial expertise with AI-powered workflows — delivering IBBI-certified valuations and Fractional CFO services faster, sharper, and more accurately than traditional practice.
           </p>
           <div style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
             <button onClick={()=>setPage("calculator")} style={{
@@ -282,10 +282,10 @@ function Home({ setPage }) {
             <div style={{ fontSize:11, fontWeight:700, color:T.lime, textTransform:"uppercase", letterSpacing:"0.1em", marginBottom:12 }}>The Person Behind Finzzup</div>
             <h2 style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:800, fontSize:"clamp(26px,3vw,36px)", color:T.text, marginBottom:16, lineHeight:1.1 }}>Garima Agarwal</h2>
             <p style={{ fontSize:15, color:T.muted, lineHeight:1.8, marginBottom:20 }}>
-              Former Credit Suisse. International advisory experience across India and the Gulf. Now building Finzzup to bring institutional-grade financial intelligence to the companies that need it most — without the institutional price tag.
+              10 years across Credit Suisse, NCR Corporation, and Allcargo Group — with active engagements in Saudi Arabia and the Gulf. CA and CFA Level II qualified, with a deep focus on valuations.
             </p>
             <p style={{ fontSize:15, color:T.muted, lineHeight:1.8, marginBottom:28 }}>
-              I've worked on valuations from ₹2 Cr startups to ₹2,100 Cr real estate projects. Every report I sign has my IBBI registration and UDIN — because your valuation needs to hold up, not just look good.
+              I use AI heavily in my workflow — not to replace judgment, but to deliver faster turnarounds, sharper analysis, and more consistent outputs. Every report still carries my professional oversight, IBBI registration, and UDIN. Speed and rigour, not one or the other.
             </p>
             <div style={{ display:"flex", gap:10, flexWrap:"wrap" }}>
               {["Chartered Accountant", "IBBI Registered Valuer", "Former Credit Suisse", "Cross-Border Experience"].map(c=>(
@@ -855,6 +855,177 @@ function Contact() {
   );
 }
 
+
+// ─── LEGAL ────────────────────────────────────────────────────────────────────
+function Legal({ tab="terms" }) {
+  const [active, setActive] = useState(tab);
+
+  const sections = {
+    terms: {
+      title: "Terms & Conditions",
+      updated: "January 2026",
+      content: [
+        {
+          heading: "1. Acceptance of Terms",
+          body: "By accessing or using the Finzzup website (finzzup.com) or any services provided by Garima Agarwal (CA, IBBI Registered Valuer, Membership No. 160944), you agree to be bound by these Terms & Conditions. If you do not agree, please do not use this website or our services."
+        },
+        {
+          heading: "2. Services",
+          body: "Finzzup provides valuation advisory, Fractional CFO services, and related financial consulting. All valuation reports are signed by Garima Agarwal, IBBI Registered Valuer (IBBI/RV/14/2022/15038). Services are governed by separate engagement letters agreed upon before commencement of work."
+        },
+        {
+          heading: "3. Indicative Calculator",
+          body: "The free valuation calculator on this website provides indicative estimates only. Results are not legally valid for any regulatory filing, tax purpose, or investment decision. They are based on industry averages and publicly available multiples. For any regulatory or compliance purpose, a formal IBBI-certified report is required."
+        },
+        {
+          heading: "4. No Professional Relationship",
+          body: "Use of this website or the free calculator does not create a professional, advisory, or fiduciary relationship between you and Garima Agarwal or Finzzup. A formal engagement is established only through a signed engagement letter."
+        },
+        {
+          heading: "5. Accuracy of Information",
+          body: "While we endeavour to keep information on this website accurate and up to date, we make no warranties regarding the completeness, accuracy, or suitability of any content. Regulatory frameworks and tax laws change — always verify current requirements with a qualified professional."
+        },
+        {
+          heading: "6. Intellectual Property",
+          body: "All content on this website — including text, case studies, blog articles, and the calculator — is the intellectual property of Garima Agarwal / Finzzup. You may not reproduce, distribute, or use any content without prior written permission."
+        },
+        {
+          heading: "7. Limitation of Liability",
+          body: "To the maximum extent permitted by law, Finzzup and Garima Agarwal shall not be liable for any indirect, incidental, or consequential damages arising from use of this website or reliance on any information herein. Our liability for any formal engagement is governed by the relevant engagement letter."
+        },
+        {
+          heading: "8. Governing Law",
+          body: "These terms are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of courts in Mumbai, Maharashtra."
+        },
+        {
+          heading: "9. Changes to Terms",
+          body: "We reserve the right to update these terms at any time. Continued use of the website after changes constitutes acceptance of the revised terms. The date of last update is noted above."
+        },
+        {
+          heading: "10. Contact",
+          body: "For any questions regarding these terms, please contact: agrgarima@gmail.com"
+        },
+      ]
+    },
+    privacy: {
+      title: "Privacy Policy",
+      updated: "January 2026",
+      content: [
+        {
+          heading: "1. Information We Collect",
+          body: "When you use the contact form or valuation calculator on this website, we collect: your name, email address, phone number (optional), company name, and the details you provide about your business. We do not collect any payment information on this website."
+        },
+        {
+          heading: "2. How We Use Your Information",
+          body: "Information you provide is used solely to: respond to your enquiry, prepare a scoped proposal for our services, and communicate with you about your engagement. We do not use your information for marketing to third parties."
+        },
+        {
+          heading: "3. Data Sharing",
+          body: "We do not sell, trade, or rent your personal information to third parties. Information may be shared with professional advisors (e.g. co-valuers, legal counsel) only where necessary for your engagement, and only with your knowledge."
+        },
+        {
+          heading: "4. Data Storage",
+          body: "Information submitted through this website is stored securely. We retain client information for a period of 7 years as required under applicable professional and tax regulations in India."
+        },
+        {
+          heading: "5. Cookies",
+          body: "This website may use basic cookies for functionality (e.g. remembering your navigation state). We do not use tracking cookies or third-party advertising cookies. You can disable cookies in your browser settings without affecting core functionality."
+        },
+        {
+          heading: "6. Your Rights",
+          body: "You have the right to request access to, correction of, or deletion of your personal data. To exercise these rights, contact us at agrgarima@gmail.com. We will respond within 30 days."
+        },
+        {
+          heading: "7. Third-Party Links",
+          body: "This website may contain links to third-party websites. We are not responsible for the privacy practices of those websites and encourage you to review their privacy policies."
+        },
+        {
+          heading: "8. WhatsApp Communication",
+          body: "If you contact us via WhatsApp, your messages are subject to WhatsApp's own privacy policy. We use WhatsApp only for direct client communication and do not add you to any broadcast lists without consent."
+        },
+        {
+          heading: "9. Changes to This Policy",
+          body: "We may update this privacy policy from time to time. The date of last revision is noted above. Continued use of the website constitutes acceptance of the updated policy."
+        },
+        {
+          heading: "10. Contact",
+          body: "For any privacy-related queries: agrgarima@gmail.com | Garima Agarwal, CA | IBBI/RV/14/2022/15038 | Membership No. 160944"
+        },
+      ]
+    },
+    disclaimer: {
+      title: "Disclaimer",
+      updated: "January 2026",
+      content: [
+        {
+          heading: "Valuation Disclaimer",
+          body: "All formal valuation reports issued by Garima Agarwal are prepared in accordance with applicable standards (IBBI Valuation Standards, Rule 11UA of the Income Tax Rules, FEMA regulations, or Ind AS as applicable). Each report is signed with UDIN and IBBI registration. The opinions expressed in reports represent professional judgment based on information provided by the client and publicly available data."
+        },
+        {
+          heading: "Calculator Disclaimer",
+          body: "The free indicative calculator on this website is for informational purposes only. It does not constitute a valuation report, financial advice, or legal opinion. Results should not be used for any regulatory filing, investment decision, or tax compliance purpose. Industry multiples used are indicative averages and may not reflect current market conditions."
+        },
+        {
+          heading: "Blog & Insights Disclaimer",
+          body: "Articles and insights published on this website are for general informational purposes only. They reflect the author's understanding at the time of writing and do not constitute legal, tax, or financial advice. Laws and regulations change — always consult a qualified professional before acting on any information."
+        },
+        {
+          heading: "No Guarantee of Outcomes",
+          body: "Case studies and results described on this website reflect specific past engagements. Past results do not guarantee future outcomes. Every valuation and advisory engagement is unique and results will vary based on the specific facts and circumstances."
+        },
+        {
+          heading: "Regulatory Compliance",
+          body: "Garima Agarwal is a Practising Chartered Accountant (Membership No. 160944) and IBBI Registered Valuer (IBBI/RV/14/2022/15038). Professional conduct is governed by the Institute of Chartered Accountants of India (ICAI) and the Insolvency and Bankruptcy Board of India (IBBI)."
+        },
+      ]
+    }
+  };
+
+  const active_doc = sections[active];
+  const tabs = [
+    { id:"terms", label:"Terms & Conditions" },
+    { id:"privacy", label:"Privacy Policy" },
+    { id:"disclaimer", label:"Disclaimer" },
+  ];
+
+  return (
+    <div style={{ padding:"120px 24px 80px", minHeight:"100vh" }}>
+      <div style={{ maxWidth:760, margin:"0 auto" }}>
+        {/* Tab switcher */}
+        <div style={{ display:"flex", gap:8, marginBottom:40, flexWrap:"wrap" }}>
+          {tabs.map(t => (
+            <button key={t.id} onClick={()=>setActive(t.id)} style={{
+              padding:"10px 20px", borderRadius:100, border:"none", cursor:"pointer",
+              fontFamily:"'Inter Tight','Inter',sans-serif", fontSize:13, fontWeight:700,
+              background: active===t.id ? T.lime : T.card,
+              color: active===t.id ? T.bg : T.muted,
+              outline: active===t.id ? "none" : `1.5px solid ${T.border}`,
+              transition:"all 0.2s",
+            }}>{t.label}</button>
+          ))}
+        </div>
+
+        {/* Document */}
+        <div style={{ background:T.card, border:`1px solid ${T.border}`, borderRadius:20, padding:"40px 36px" }}>
+          <div style={{ marginBottom:32 }}>
+            <h1 style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:800, fontSize:32, color:T.text, marginBottom:8 }}>{active_doc.title}</h1>
+            <p style={{ fontSize:13, color:T.dim }}>Last updated: {active_doc.updated} · Finzzup / Garima Agarwal</p>
+          </div>
+          {active_doc.content.map((s, i) => (
+            <div key={i} style={{ marginBottom:28, paddingBottom:28, borderBottom: i < active_doc.content.length-1 ? `1px solid ${T.border}` : "none" }}>
+              <h3 style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:700, fontSize:16, color:T.text, marginBottom:10 }}>{s.heading}</h3>
+              <p style={{ fontSize:14, color:T.muted, lineHeight:1.8 }}>{s.body}</p>
+            </div>
+          ))}
+          <div style={{ marginTop:32, padding:"16px 20px", borderRadius:12, background:`${T.lime}08`, border:`1px solid ${T.lime}20`, fontSize:13, color:T.muted }}>
+            Questions? Email <strong style={{ color:T.text }}>agrgarima@gmail.com</strong> or WhatsApp <a href="https://wa.me/919833585810" style={{ color:T.lime, fontWeight:700 }}>+91 98335 85810</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── FOOTER ───────────────────────────────────────────────────────────────────
 function Footer({ setPage }) {
   return (
@@ -869,7 +1040,7 @@ function Footer({ setPage }) {
         {[
           { head:"Services", links:[["Valuations","calculator"],["Fractional CFO","contact"],["Ind AS Advisory","contact"],["FEMA / Gulf","contact"]] },
           { head:"Company", links:[["Case Studies","cases"],["Insights","blog"],["Contact","contact"]] },
-          { head:"Legal", links:[["IBBI Reg: IBBI/RV/14/2022/15038",null],["CA Membership: 160944",null],["agrgarima@gmail.com",null]] },
+          { head:"Legal", links:[["Terms & Conditions","legal"],["Privacy Policy","legal"],["Disclaimer","legal"],["IBBI Reg: IBBI/RV/14/2022/15038",null],["CA Membership: 160944",null]] },
         ].map((col,i)=>(
           <div key={i}>
             <div style={{ fontSize:11, fontWeight:700, color:T.muted, textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:14 }}>{col.head}</div>
@@ -898,7 +1069,7 @@ function Footer({ setPage }) {
 export default function App() {
   const [page, setPage] = useState("home");
   useEffect(() => { window.scrollTo({ top:0, behavior:"smooth" }); }, [page]);
-  const pages = { home:<Home setPage={setPage}/>, calculator:<Calculator/>, cases:<Cases/>, blog:<Blog/>, contact:<Contact/> };
+  const pages = { home:<Home setPage={setPage}/>, calculator:<Calculator/>, cases:<Cases/>, blog:<Blog/>, contact:<Contact/>, legal:<Legal/> };
   return (
     <div style={{ background:T.bg, minHeight:"100vh", color:T.text, fontFamily:"'Space Grotesk',sans-serif" }}>
       <Nav page={page} setPage={setPage}/>
