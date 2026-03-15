@@ -107,12 +107,12 @@ const SectionHead = ({ eyebrow, title, sub, center=true }) => (
 );
 
 // ─── LOGO ─────────────────────────────────────────────────────────────────────
-const Logo = ({ size=32 }) => (
+const Logo = ({ dark=false }) => (
   <div style={{ display:"flex", alignItems:"center", gap:10 }}>
     <img src={LOGO_SRC} alt="Finzzup" style={{ height:48, width:"auto", objectFit:"contain", display:"block" }}/>
-    <div style={{ display:"flex", flexDirection:"column", gap:1 }}>
-      <span style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:800, fontSize:26, color:"inherit", letterSpacing:"-0.03em", lineHeight:1 }}>Finzzup</span>
-      <span style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:600, fontSize:10, color:"#7C3AED", letterSpacing:"0.12em", textTransform:"uppercase", lineHeight:1 }}>Build. Value. Scale.</span>
+    <div style={{ display:"flex", flexDirection:"column", gap:2 }}>
+      <span style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:800, fontSize:26, color: dark ? "#111827" : "#ffffff", letterSpacing:"-0.03em", lineHeight:1 }}>Finzzup</span>
+      <span style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:600, fontSize:10, color: dark ? "#7C3AED" : "rgba(255,255,255,0.65)", letterSpacing:"0.12em", textTransform:"uppercase", lineHeight:1 }}>Build. Value. Scale.</span>
     </div>
   </div>
 );
@@ -144,15 +144,15 @@ function Nav({ page, setPage }) {
         transition:"all 0.3s",
       }}>
         <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 24px", height:72, display:"flex", alignItems:"center", justifyContent:"space-between" }}>
-          <button onClick={()=>setPage("home")} style={{ background:"none", border:"none", cursor:"pointer", padding:0 }}>
-            <Logo size={30}/>
+          <button onClick={()=>setPage("home")} style={{ background:"none", border:"none", cursor:"pointer", padding:0, display:"flex", alignItems:"center" }}>
+            <Logo dark={false}/>
           </button>
           <div style={{ display:"flex", alignItems:"center", gap:4 }} className="deskav">
             {links.map(l=>(
               <button key={l.id} onClick={()=>setPage(l.id)} style={{
                 background:"none", border:"none", cursor:"pointer", padding:"8px 14px",
                 borderRadius:8, fontSize:14, fontWeight:600, fontFamily:"'Inter Tight','Inter',sans-serif",
-                color: page===l.id ? T.lime : T.muted, transition:"color 0.2s",
+                color: page===l.id ? T.lime : "rgba(255,255,255,0.8)", transition:"color 0.2s",
               }}>{l.label}</button>
             ))}
             <button onClick={()=>window.open("https://finzzup-portal-v4.vercel.app","_blank")} style={{
@@ -859,7 +859,7 @@ function Footer({ setPage }) {
     <footer style={{ borderTop:`1px solid ${T.border}`, padding:"48px 24px 32px", marginTop:40 }}>
       <div style={{ maxWidth:1100, margin:"0 auto", display:"grid", gridTemplateColumns:"1.5fr 1fr 1fr 1fr", gap:40 }} className="footer-grid">
         <div>
-          <Logo size={28}/>
+          <Logo size={28} dark={true}/>
           <p style={{ fontSize:13, color:T.muted, lineHeight:1.7, marginTop:14, maxWidth:260 }}>
             Know what's up with your finances. IBBI-certified valuations and Fractional CFO for startups, SMEs, and corporates.
           </p>
