@@ -108,11 +108,11 @@ const SectionHead = ({ eyebrow, title, sub, center=true }) => (
 
 // ─── LOGO ─────────────────────────────────────────────────────────────────────
 const Logo = ({ size=32 }) => (
-  <div style={{ display:"flex", alignItems:"center", gap:12 }}>
-    <img src={LOGO_SRC} alt="Finzzup" style={{ height:52, width:"auto", objectFit:"contain", display:"block" }}/>
-    <div style={{ display:"flex", flexDirection:"column", lineHeight:1.2 }}>
-      <span style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:800, fontSize:22, color:"inherit", letterSpacing:"-0.02em" }}>Finzzup</span>
-      <span style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:500, fontSize:10, color:"#9CA3AF", letterSpacing:"0.08em", textTransform:"uppercase", marginTop:3 }}>Build. Value. Scale.</span>
+  <div style={{ display:"flex", alignItems:"center", gap:10 }}>
+    <img src={LOGO_SRC} alt="Finzzup" style={{ height:48, width:"auto", objectFit:"contain", display:"block" }}/>
+    <div style={{ display:"flex", flexDirection:"column", gap:1 }}>
+      <span style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:800, fontSize:26, color:"inherit", letterSpacing:"-0.03em", lineHeight:1 }}>Finzzup</span>
+      <span style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:600, fontSize:10, color:"#7C3AED", letterSpacing:"0.12em", textTransform:"uppercase", lineHeight:1 }}>Build. Value. Scale.</span>
     </div>
   </div>
 );
@@ -143,7 +143,7 @@ function Nav({ page, setPage }) {
         borderBottom: scrolled ? `1px solid ${T.border}` : "none",
         transition:"all 0.3s",
       }}>
-        <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 24px", height:64, display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+        <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 24px", height:72, display:"flex", alignItems:"center", justifyContent:"space-between" }}>
           <button onClick={()=>setPage("home")} style={{ background:"none", border:"none", cursor:"pointer", padding:0 }}>
             <Logo size={30}/>
           </button>
