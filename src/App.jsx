@@ -107,8 +107,8 @@ const SectionHead = ({ eyebrow, title, sub, center=true }) => (
 );
 
 // ─── LOGO ─────────────────────────────────────────────────────────────────────
-const Logo = ({ size=36 }) => (
-  <img src={LOGO_SRC} alt="Finzzup" style={{ height: size * 3.8, width:"auto", objectFit:"contain", display:"block" }}/>
+const Logo = ({ size=38 }) => (
+  <img src={LOGO_SRC} alt="Finzzup" style={{ height: size * 3.4, width:"auto", objectFit:"contain", display:"block" }}/>
 );
 
 // ─── NAV ──────────────────────────────────────────────────────────────────────
