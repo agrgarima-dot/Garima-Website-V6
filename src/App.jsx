@@ -107,12 +107,14 @@ const SectionHead = ({ eyebrow, title, sub, center=true }) => (
 );
 
 // ─── LOGO ─────────────────────────────────────────────────────────────────────
+// dark=true → dark text (light backgrounds: hero, footer)
+// dark=false → white text (dark nav background when scrolled)
 const Logo = ({ dark=false }) => (
-  <div style={{ display:"flex", alignItems:"center", gap:10 }}>
-    <img src={LOGO_SRC} alt="Finzzup" style={{ height:48, width:"auto", objectFit:"contain", display:"block" }}/>
-    <div style={{ display:"flex", flexDirection:"column", gap:2 }}>
-      <span style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:800, fontSize:26, color: dark ? "#111827" : "#ffffff", letterSpacing:"-0.03em", lineHeight:1 }}>Finzzup</span>
-      <span style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:600, fontSize:10, color: dark ? "#7C3AED" : "rgba(255,255,255,0.65)", letterSpacing:"0.12em", textTransform:"uppercase", lineHeight:1 }}>Build. Value. Scale.</span>
+  <div style={{ display:"flex", alignItems:"center", gap:14 }}>
+    <img src={LOGO_SRC} alt="Finzzup" style={{ height:70, width:"auto", objectFit:"contain", display:"block" }}/>
+    <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
+      <span style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:800, fontSize:34, color: dark ? "#111827" : "#ffffff", letterSpacing:"-0.03em", lineHeight:1 }}>Finzzup</span>
+      <span style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:600, fontSize:12, color: dark ? "#7C3AED" : "rgba(255,255,255,0.7)", letterSpacing:"0.12em", textTransform:"uppercase", lineHeight:1 }}>Build. Value. Scale.</span>
     </div>
   </div>
 );
@@ -143,9 +145,9 @@ function Nav({ page, setPage }) {
         borderBottom: scrolled ? `1px solid ${T.border}` : "none",
         transition:"all 0.3s",
       }}>
-        <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 24px", height:72, display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+        <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 24px", height:84, display:"flex", alignItems:"center", justifyContent:"space-between" }}>
           <button onClick={()=>setPage("home")} style={{ background:"none", border:"none", cursor:"pointer", padding:0, display:"flex", alignItems:"center" }}>
-            <Logo dark={false}/>
+            <Logo dark={!scrolled}/>
           </button>
           <div style={{ display:"flex", alignItems:"center", gap:4 }} className="deskav">
             {links.map(l=>(
@@ -157,14 +159,14 @@ function Nav({ page, setPage }) {
             ))}
             <button onClick={()=>window.open("https://finzzup-portal-v4.vercel.app","_blank")} style={{
               marginLeft:8, padding:"9px 20px", borderRadius:100, border:`1.5px solid ${T.lime}`,
-              background:"transparent", cursor:"pointer", fontSize:13, fontWeight:700,
+              background: scrolled ? "transparent" : `${T.lime}15`, cursor:"pointer", fontSize:13, fontWeight:700,
               color:T.lime, fontFamily:"'Inter Tight','Inter',sans-serif", letterSpacing:"0.02em",
             }}>Client Login →</button>
           </div>
           <button onClick={()=>setOpen(o=>!o)} className="hamb" style={{ background:"none", border:"none", cursor:"pointer", display:"none", padding:4 }}>
-            <div style={{ width:22, height:2, background:T.muted, marginBottom:5, borderRadius:2 }}/>
-            <div style={{ width:22, height:2, background:T.muted, marginBottom:5, borderRadius:2 }}/>
-            <div style={{ width:22, height:2, background:T.muted, borderRadius:2 }}/>
+            <div style={{ width:22, height:2, background: scrolled ? "white" : T.muted, marginBottom:5, borderRadius:2 }}/>
+            <div style={{ width:22, height:2, background: scrolled ? "white" : T.muted, marginBottom:5, borderRadius:2 }}/>
+            <div style={{ width:22, height:2, background: scrolled ? "white" : T.muted, borderRadius:2 }}/>
           </button>
         </div>
       </nav>
@@ -365,7 +367,7 @@ function Calculator() {
   if(done) return (
     <div style={{ minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", padding:"120px 24px 80px" }}>
       <div style={{ textAlign:"center", maxWidth:400 }}>
-        <div style={{ width:72, height:72, borderRadius:20, background:T.lime, display:"flex", alignItems:"center", justifyContent:"center", fontSize:28, margin:"0 auto 24px" }}>✓</div>
+        <div style={{ width:72, height:84, borderRadius:20, background:T.lime, display:"flex", alignItems:"center", justifyContent:"center", fontSize:28, margin:"0 auto 24px" }}>✓</div>
         <h2 style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:800, fontSize:28, color:T.text, marginBottom:12 }}>Got it, {f.name.split(" ")[0]}!</h2>
         <p style={{ fontSize:15, color:T.muted, lineHeight:1.7, marginBottom:24 }}>Garima will reach out within 24 hours with a scoped proposal for your IBBI-certified report.</p>
         <div style={{ padding:"10px 20px", borderRadius:100, background:`${T.lime}15`, border:`1px solid ${T.lime}30`, fontSize:12, fontWeight:700, color:T.lime, display:"inline-block" }}>
@@ -776,7 +778,7 @@ function Contact() {
   if(sent) return (
     <div style={{ minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", padding:"120px 24px 80px" }}>
       <div style={{ textAlign:"center", maxWidth:380 }}>
-        <div style={{ width:72, height:72, borderRadius:20, background:T.lime, display:"flex", alignItems:"center", justifyContent:"center", fontSize:28, margin:"0 auto 24px" }}>✓</div>
+        <div style={{ width:72, height:84, borderRadius:20, background:T.lime, display:"flex", alignItems:"center", justifyContent:"center", fontSize:28, margin:"0 auto 24px" }}>✓</div>
         <h2 style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:800, fontSize:28, color:T.text, marginBottom:12 }}>Message sent!</h2>
         <p style={{ fontSize:15, color:T.muted, lineHeight:1.7 }}>Garima will respond within 24 hours. If it's urgent, WhatsApp is faster.</p>
         <a href="https://wa.me/919833585810" target="_blank" rel="noopener" style={{ display:"inline-flex", alignItems:"center", gap:8, marginTop:20, padding:"10px 20px", borderRadius:10, background:T.green+"15", border:`1.5px solid ${T.green}30`, color:T.green, fontSize:13, fontWeight:700 }}>
