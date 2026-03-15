@@ -107,7 +107,7 @@ const SectionHead = ({ eyebrow, title, sub, center=true }) => (
 );
 
 // ─── LOGO ─────────────────────────────────────────────────────────────────────
-const Logo = ({ size=32 }) => (
+const Logo = ({ size=52 }) => (
   <div style={{ display:"flex", alignItems:"center", gap:10 }}>
     <img src={LOGO_SRC} alt="Finzzup" style={{ height: size + 8, width:"auto", objectFit:"contain", display:"block" }}/>
     <div style={{ display:"flex", flexDirection:"column", lineHeight:1 }}>
