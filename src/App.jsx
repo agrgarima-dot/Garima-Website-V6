@@ -154,7 +154,7 @@ function Nav({ page, setPage }) {
               <button key={l.id} onClick={()=>setPage(l.id)} style={{
                 background:"none", border:"none", cursor:"pointer", padding:"8px 14px",
                 borderRadius:8, fontSize:14, fontWeight:600, fontFamily:"'Inter Tight','Inter',sans-serif",
-                color: page===l.id ? T.lime : "rgba(255,255,255,0.8)", transition:"color 0.2s",
+                color: page===l.id ? T.lime : scrolled ? "rgba(255,255,255,0.85)" : T.muted, transition:"color 0.2s",
               }}>{l.label}</button>
             ))}
             <button onClick={()=>window.open("https://finzzup-portal-v4.vercel.app","_blank")} style={{
@@ -221,7 +221,7 @@ function Home({ setPage }) {
     { n:"₹2,100 Cr+", l:"Largest single valuation" },
     { n:"150+",       l:"Reports delivered" },
     { n:"5–7 days",   l:"Average turnaround" },
-    { n:"Big 4",      l:"Former background" },
+    { n:"India & Gulf", l:"Cross-border advisory" },
   ];
 
   return (
@@ -282,13 +282,13 @@ function Home({ setPage }) {
             <div style={{ fontSize:11, fontWeight:700, color:T.lime, textTransform:"uppercase", letterSpacing:"0.1em", marginBottom:12 }}>The Person Behind Finzzup</div>
             <h2 style={{ fontFamily:"'Inter Tight','Inter',sans-serif", fontWeight:800, fontSize:"clamp(26px,3vw,36px)", color:T.text, marginBottom:16, lineHeight:1.1 }}>Garima Agarwal</h2>
             <p style={{ fontSize:15, color:T.muted, lineHeight:1.8, marginBottom:20 }}>
-              Former Credit Suisse. Big 4 experience. Now building Finzzup to bring institutional-grade financial intelligence to the companies that need it most — without the institutional price tag.
+              Former Credit Suisse. International advisory experience across India and the Gulf. Now building Finzzup to bring institutional-grade financial intelligence to the companies that need it most — without the institutional price tag.
             </p>
             <p style={{ fontSize:15, color:T.muted, lineHeight:1.8, marginBottom:28 }}>
               I've worked on valuations from ₹2 Cr startups to ₹2,100 Cr real estate projects. Every report I sign has my IBBI registration and UDIN — because your valuation needs to hold up, not just look good.
             </p>
             <div style={{ display:"flex", gap:10, flexWrap:"wrap" }}>
-              {["Chartered Accountant", "IBBI Registered Valuer", "Former Credit Suisse", "Big 4 Background"].map(c=>(
+              {["Chartered Accountant", "IBBI Registered Valuer", "Former Credit Suisse", "Cross-Border Experience"].map(c=>(
                 <span key={c} style={{ padding:"6px 12px", borderRadius:8, background:T.card, border:`1px solid ${T.border}`, fontSize:12, fontWeight:600, color:T.muted }}>{c}</span>
               ))}
             </div>
@@ -869,7 +869,7 @@ function Footer({ setPage }) {
         {[
           { head:"Services", links:[["Valuations","calculator"],["Fractional CFO","contact"],["Ind AS Advisory","contact"],["FEMA / Gulf","contact"]] },
           { head:"Company", links:[["Case Studies","cases"],["Insights","blog"],["Contact","contact"]] },
-          { head:"Legal", links:[["IBBI Reg: IBBI/RV/14/2022/15038",null],["CA Membership",null],["agrgarima@gmail.com",null]] },
+          { head:"Legal", links:[["IBBI Reg: IBBI/RV/14/2022/15038",null],["CA Membership: 160944",null],["agrgarima@gmail.com",null]] },
         ].map((col,i)=>(
           <div key={i}>
             <div style={{ fontSize:11, fontWeight:700, color:T.muted, textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:14 }}>{col.head}</div>
