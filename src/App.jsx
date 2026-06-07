@@ -654,6 +654,33 @@ function Cases() {
 function Blog() {
   const posts = [
     {
+      tag:"UAE / Valuation", title:"Business Valuation Methods for UAE Free Zone Companies",
+      excerpt:"Free zone companies in the UAE have unique structures that most standard valuation frameworks weren't built for. Here's how to get it right.",
+      mins:5, accent:T.yellow,
+      body:`If you own a company registered in JAFZA, DMCC, DIFC, ADGM, or any of the UAE's 40+ free zones, you've probably been asked for a valuation — and received a number that felt either too low or impossible to justify. The problem usually isn't the business; it's that the valuation wasn't built for a free zone structure.
+
+**Why Free Zone Companies Are Different**
+Free zone entities aren't just offshore shells. Many have real operations, multi-currency revenues, 0% corporate tax (under legacy arrangements), and investors across UAE, India, and the GCC. That combination creates genuine complexity. A valuation model built for a UK LLP or an Indian private limited company will miss the mark.
+
+**The Right Methodology Depends on Your Purpose**
+Valuation isn't one-size-fits-all. The method depends on why you need the number.
+
+For fundraising or share transfers between investors, the Discounted Cash Flow (DCF) method is the most defensible. You forecast free cash flows, apply a discount rate that reflects your business risk and the UAE market, and arrive at an enterprise value. The strength of a DCF is that it captures future earnings potential — which is usually where the value actually sits in a growing business.
+
+For acquisitions or mergers, a Market Comparable approach works well alongside DCF. You look at transaction multiples from similar businesses in the GCC or comparable emerging markets. EBITDA multiples in the UAE's trading and professional services sectors typically range from 4x to 8x, though tech-enabled businesses command more.
+
+For businesses with significant physical assets — real estate, equipment, inventory — the Asset-Based (NAV) approach anchors the valuation in tangible value. This is common for holding companies and asset-heavy free zone entities.
+
+**The DIFC/ADGM Premium**
+Companies registered in DIFC (Dubai International Financial Centre) or ADGM (Abu Dhabi Global Market) often attract a structural premium. These are common law jurisdictions with robust corporate governance frameworks, making them far more legible to international investors. A DIFC SPV holding a UAE operating business will typically command a higher multiple than an equivalent mainland or standard free zone entity, all else being equal.
+
+**What Buyers and Investors Actually Look For**
+When a serious buyer or investor reviews a UAE free zone company, they want clarity on three things: revenue quality (recurring vs. one-off), regulatory status (is the licence current, are there any pending violations), and cross-border exposure (does the company have Indian, Saudi, or GCC clients with concentration risk). Address these upfront in your valuation narrative.
+
+**Key Takeaway**
+A credible valuation for a UAE free zone company needs to account for your specific licence type, tax status, jurisdiction, and the purpose of the valuation — not just your revenue. If you're preparing for a funding round, acquisition, or shareholder change, get a valuation that was built for your structure, not adapted from a template.`,
+    },
+    {
       tag:"Regulation", title:"SEBI's IPEV circular: what it means for AIF-backed startups",
       excerpt:"In September 2024, SEBI mandated that all AIFs must value unlisted securities using IPEV guidelines. Here's what it means for your next funding round.",
       mins:4, accent:T.blue,
