@@ -654,6 +654,30 @@ function Cases() {
 function Blog() {
   const posts = [
     {
+      tag:"KSA / CFO", title:"How a Fractional CFO Helps Saudi SMEs Raise Capital in the Vision 2030 Era",
+      excerpt:"Saudi Arabia's SME sector is growing fast under Vision 2030 — but most founders still don't have the financial infrastructure investors expect. A fractional CFO changes that equation.",
+      mins:6, accent:T.purple,
+      body:`Saudi Arabia's Vision 2030 has created a genuine wave of capital availability for SMEs — from PIF-backed funds to the Monshaat ecosystem and a growing angel and VC scene in Riyadh. The problem is that most Saudi SMEs aren't investor-ready. Not because the business isn't good, but because the financial infrastructure isn't there. That's exactly where a fractional CFO earns their fee.
+
+**What 'Investor-Ready' Actually Means in the KSA Context**
+When a Saudi VC or development finance institution like the Saudi SME Bank evaluates your business, they're looking for three things: a credible financial model, audited or reviewed historical financials, and a clear use-of-funds breakdown. Most SME owners have none of these in a form that a serious investor will accept. A fractional CFO builds this infrastructure — without you needing to hire a full-time CFO at SAR 40,000–60,000 per month.
+
+**ZATCA Compliance as a Fundraising Signal**
+One underrated insight: ZATCA compliance (the Saudi tax authority) has become a credibility signal for investors. With e-invoicing Phase 2 fully rolled out, investors now use your Fatoorah data to validate revenue claims. A fractional CFO ensures your financial records are clean, reconciled, and defensible. Messy books are the single fastest way to kill investor confidence in due diligence.
+
+**The Financial Model Problem**
+Most KSA founders either don't have a financial model or have one built in Excel that doesn't hold up to scrutiny. A good fractional CFO will build a 3-year integrated P&L, balance sheet, and cash flow model with clearly stated assumptions. For businesses in sectors like logistics, F&B, or professional services — all high-priority sectors under Vision 2030 — the model needs to show unit economics per outlet, route, or client. That's the standard institutional investors in the Kingdom now expect.
+
+**Navigating Saudi-Specific Capital Sources**
+Beyond private investors, KSA has several public and quasi-public funding mechanisms SMEs often overlook: Kafalah guarantee programs, Monshaat accelerator funding, the Saudi Industrial Development Fund (SIDF) for manufacturing, and Shariah-compliant debt structures from Saudi banks. Each has its own documentation and financial ratio requirements. A fractional CFO who knows the KSA landscape will identify which programs you qualify for and prepare the right submission — something a generalist finance hire won't know to do.
+
+**When to Bring One In**
+The right moment is typically 3–6 months before you plan to approach investors or lenders. That gives enough time to clean up historical financials, build the model, and run a few internal stress tests before any investor sees the numbers. Coming in too late — after you've already had conversations with investors — means you're reacting instead of leading.
+
+**Key Takeaway**
+In Saudi Arabia's current capital environment, the question isn't whether you can raise money — it's whether you're presenting your business in a way that makes it easy for investors to say yes. A fractional CFO is the most capital-efficient way to close that gap, especially if you're raising between SAR 1M and SAR 20M where the overhead of a full-time hire doesn't make sense.`,
+    },
+    {
       tag:"UAE / Valuation", title:"Business Valuation Methods for UAE Free Zone Companies",
       excerpt:"Free zone companies in the UAE have unique structures that most standard valuation frameworks weren't built for. Here's how to get it right.",
       mins:5, accent:T.yellow,
